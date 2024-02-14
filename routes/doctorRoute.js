@@ -4,6 +4,6 @@ const route = require("express").Router();
 
 route.post(`/docregister`, register);
 route.get(`/all`, readall);
-route.get(`/doclogin`, login);
+route.post(`/doclogin`, login);
 
 module.exports = route;
