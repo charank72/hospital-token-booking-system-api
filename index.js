@@ -10,6 +10,15 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
+app.use(express.static("build"));
+
+if (process.env.SERVER === "production") {
+  // executes in production mode
+  app.use(`/`, (req, res, next) => {
+    return res.sendFile(path.resolve(__dirname, `./build/index.html`));
+    next();
+  });
+}
 
 app.use(cors());
 app.use(cookieParser(process.env.ACCESS_SECRET));

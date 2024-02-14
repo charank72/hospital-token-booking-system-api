@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0203240b.css",
+    "main.js": "/static/js/main.eef35355.js",
+    "static/js/592.3a47dce3.chunk.js": "/static/js/592.3a47dce3.chunk.js",
+    "static/media/tick.gif": "/static/media/tick.e8e0718dbab5850c12e0.gif",
+    "static/media/bell-done3.gif": "/static/media/bell-done3.b275ec6f35bd9fb0a91a.gif",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/Profile Interface-cuate.svg": "/static/media/Profile Interface-cuate.3f264ae24d2914f947889e67aefaae59.svg",
+    "static/media/undraw_medicine_b-1-ol.svg": "/static/media/undraw_medicine_b-1-ol.a68d1587d129d149fa961b689f7e1934.svg",
+    "static/media/user.svg": "/static/media/user.152ab201bd672c8cd1b1157ca895c79d.svg",
+    "static/media/doctor-office-logo-template_23-2149665623.jpg": "/static/media/doctor-office-logo-template_23-2149665623.bf46ece179f6e41639cd.jpg",
+    "static/media/hospital.svg": "/static/media/hospital.bf5f5616b2680df855fc95fd2ac02ff9.svg",
+    "static/media/undraw_medical_care_movn.svg": "/static/media/undraw_medical_care_movn.b236b69b73b0210ed8a85c06d1718659.svg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.0203240b.css.map": "/static/css/main.0203240b.css.map",
+    "main.eef35355.js.map": "/static/js/main.eef35355.js.map",
+    "592.3a47dce3.chunk.js.map": "/static/js/592.3a47dce3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0203240b.css",
+    "static/js/main.eef35355.js"
+  ]
+}
