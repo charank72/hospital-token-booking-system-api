@@ -67,20 +67,10 @@ const login = async (req, res) => {
       if (!isMatch)
         return res
           .status(StatusCodes.UNAUTHORIZED)
-          .json({ msg: `password not matched`, success: false,extEmail });
-
-      let authToken = createAccessToken({ id: extEmail._id });
-      //set the token in cookies one
-      //TOKEN
-      res.cookie("loginToken", authToken, {
-        httpOnly: true,
-        signed: true,
-        path: "/api/auth/token",
-        maxAge: 1 * 24 * 60 * 60 * 1000,
-      });
+          .json({ msg: `password not matched`, success: false, extEmail });
       res
         .status(StatusCodes.OK)
-        .json({ msg: `login success(with email)`, success: true, authToken });
+        .json({ msg: `login success(with email)`, success: true });
     }
   } catch (err) {
     return res
@@ -89,4 +79,4 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { readall, register,login };
+module.exports = { readall, register, login };
