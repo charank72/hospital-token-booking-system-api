@@ -67,7 +67,7 @@ const login = async (req, res) => {
       if (!isMatch)
         return res
           .status(StatusCodes.UNAUTHORIZED)
-          .json({ msg: `password not matched`, success: false });
+          .json({ msg: `password not matched`, success: false,extEmail });
 
       let authToken = createAccessToken({ id: extEmail._id });
       //set the token in cookies one
