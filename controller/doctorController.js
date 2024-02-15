@@ -50,6 +50,34 @@ const register = async (req, res) => {
       .json({ msg: err.message, success: false });
   }
 };
+const readSingle = async (req, res) => {
+  let id = req.params.id;
+  let single = await User.findById(id);
+  if (!single)
+    return res.status(StatusCodes.UNAUTHORIZED).json({ msg: "no user found" });
+
+  return res.status(StatusCodes.OK).json({ msg: "user data", single });
+};
+const deleteUser = async (req, res) => {
+  try {
+    let id = req.params.id;
+    let single = await User.findById(id);
+    if (!single)
+      return res
+        .status(StatusCodes.CONFLICT)
+        .json({ msg: `requested user not found`, success: false });
+
+    await User.findByIdAndDelete({ _id: id });
+
+    res
+      .status(StatusCodes.OK)
+      .json({ msg: "user info successfully deleted", success: true });
+  } catch (err) {
+    return res
+      .status(StatusCodes.INTERNAL_SERVER_ERROR)
+      .json({ msg: err.message, success: false });
+  }
+};
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -79,4 +107,4 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { readall, register, login };
+module.exports = { readall, register, login, readSingle, deleteUser };
