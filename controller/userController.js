@@ -5,8 +5,19 @@ const userController = {
   form: async (req, res) => {
     try {
       const { name, email, mobile, gender, role, issue } = req.body;
+
+      const mobileRegex = /^[0-9]{10}$/;
+      if (!mobileRegex.test(mobile)) {
+        return res
+          .status(StatusCodes.BAD_REQUEST)
+          .json({
+            msg: "Mobile number must be exactly 10 digits",
+            success: false,
+          });
+      }
+
       let userList = await User.find({});
-      let users = userList.filter((item) => item.role !== "doctor");
+      let users = userList.filter(item => item.role !== "doctor");
       let tokenGen = users.length + 1;
       let data = await User.create({
         name,
